@@ -1,0 +1,9 @@
+# 保持跨平台源文件换行一致，避免 Windows 与 GitHub 之间出现整文件差异。
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.toml text eol=lf
+*.txt text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+LICENSE text eol=lf

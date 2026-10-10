@@ -1,0 +1,3 @@
+# 源码发行包包含完整演示，wheel 只安装插件包。
+include demo.py demo_ui.py requirements.txt
+recursive-include docs/images *.png

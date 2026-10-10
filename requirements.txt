@@ -1,0 +1,2 @@
+# 使用当前工程 .venv；发布依赖同时声明于 pyproject.toml。
+panda3d>=1.10.16,<1.11

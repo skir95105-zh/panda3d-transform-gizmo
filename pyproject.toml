@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "panda3d-transform-gizmo"
+version = "0.1.0"
+description = "Interactive translation, rotation and scale gizmos for Panda3D"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+dependencies = ["panda3d>=1.10.16,<1.11"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Games/Entertainment",
+    "Topic :: Multimedia :: Graphics :: 3D Modeling",
+]
+
+[project.optional-dependencies]
+dev = ["ruff", "build", "pyright", "types-panda3d>=0.4.1"]
+
+[tool.setuptools.packages.find]
+include = ["TransformGizmo*"]
+
+[tool.setuptools.package-data]
+TransformGizmo = ["docs/*.md", "py.typed"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "UP"]
+
+[tool.pyright]
+include = ["TransformGizmo", "demo.py", "demo_ui.py"]
+venvPath = "."
+venv = ".venv"
+pythonVersion = "3.10"
+typeCheckingMode = "standard"
+reportMissingParameterType = "error"
+reportUnknownParameterType = "error"
+reportUnknownVariableType = "error"
+reportUnknownArgumentType = "error"
+reportUnknownMemberType = "error"

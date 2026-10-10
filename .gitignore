@@ -1,0 +1,22 @@
+# Python 虚拟环境与解释器缓存
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# 构建与安装产物
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# 本地工具、系统文件及运行产物
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.log
+screenshots/
+.env
+.env.*
